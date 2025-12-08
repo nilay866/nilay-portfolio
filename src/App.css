@@ -1,38 +1,75 @@
-.App {
+:root {
+  --bg: #0b0f12;
+  --card: #141b22;
+  --text: #e6eef4;
+  --muted: #9aa5b1;
+  --accent: #7c3aed;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.hero {
   text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(#0f1520, #0b0f12);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h1 {
+  font-size: 2.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero p {
+  color: var(--muted);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cta a {
+  margin: 0 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skills span {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.4rem 0.7rem;
+  background: #10151c;
+  border-radius: 6px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--muted);
 }
